@@ -8,7 +8,7 @@ load_dotenv()
 
 # APIキー設定（環境変数に設定しておくこと）
 openai.api_key = os.getenv("OPENAI_API_KEY")
-print("n1")
+
 app = FastAPI()
 
 # CORS許可
@@ -32,7 +32,6 @@ async def generate_image(req: PromptRequest):
         #     size="1024x1024"
         # )
         ### tmp
-        print("n2")
         response = openai.images.generate(
             model="dall-e-2",
             prompt=req.prompt,
