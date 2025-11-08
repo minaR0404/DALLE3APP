@@ -3,9 +3,10 @@
 # 🎨 DALLE3APP
 
 FastAPI + OpenAI API（DALL·E 3） + Vite + React + Tailwind CSS を使った画像生成アプリケーションです。  
-テキストから画像を自動生成できます。
+テキストから画像を自動生成できます。  
+AWSのEC2内にてデプロイ完了！（2025/11/8〜：現在公開停止中）
 
-![アプリ画面](assets/dalle3app-img.png)
+<img src="./assets/dalle3app-img.png" alt="アプリ画面" width="300">
 
 ---
 
@@ -49,14 +50,14 @@ DALLE3APP/
 ```bash
 git clone https://github.com/minaR0404/DALLE3APP.git
 cd DALLE3APP
-```
+```  
 
 ### 🔹 2. OpenAI API キーの設定
 .env ファイル、または環境変数に以下を設定します：
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
 ```
-（Macの場合は ~/.bashrc または ~/.zshrc に追記すると便利です）
+（Macの場合は ~/.bashrc または ~/.zshrc に追記すると便利です）  
 
 ### 🔹 3. バックエンド環境構築（FastAPI）
 Python 仮想環境を構築して依存関係をインストールします。
@@ -71,7 +72,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 API ドキュメントは以下で確認できます（実行前は確認できません）  
-👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)  
 
 ### 🔹 4. フロントエンド環境構築（Vite + React + Tailwind）
 ```bash
@@ -80,12 +81,12 @@ npm install
 npm run dev
 ```
 起動後、以下のURLにアクセスします  
-👉 [http://localhost:5173/](http://localhost:5173/)
+👉 [http://localhost:5173/](http://localhost:5173/)  
 
 ### ⚙️ APIエンドポイント
 | メソッド | エンドポイント | 概要 |
 | ------ | ----------- | -------- |
-|POST | /generate_image | テキストから画像を生成 |
+|POST | /generate_image | テキストから画像を生成 |  
 
 ### 🐳 Docker での実行（おすすめ／オプション）
 Docker 環境で簡単に起動できます。
