@@ -13,7 +13,7 @@ function App() {
     setLoading(true);
     setImageUrl("");
     try {
-      const res = await axios.post("http://127.0.0.1:8000/generate_image", { prompt }); //http://localhost:8000/generate_image
+      const res = await axios.post("/api/generate_image", { prompt }); //http://127.0.0.1:8000/generate_image
       setImageUrl(res.data.url);
     } catch (err) {
       alert("画像生成に失敗しました");
