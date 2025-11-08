@@ -5,7 +5,7 @@
 FastAPI + OpenAI API（DALL·E 3） + Vite + React + Tailwind CSS を使った画像生成アプリケーションです。  
 テキストから画像を自動生成できます。
 
-![アプリ画面](./assets/スクリーンショット 2025-11-08 17.57.31.png)
+![アプリ画面](assets/dalle3app-img.png)
 
 ---
 
@@ -20,7 +20,7 @@ FastAPI + OpenAI API（DALL·E 3） + Vite + React + Tailwind CSS を使った�
 ---
 
 ## 📂 ディレクトリ構成
-
+<pre>
 DALLE3APP/
 ├── backend/ # FastAPI バックエンド
 │ ├── main.py # メインAPIサーバー
@@ -36,12 +36,13 @@ DALLE3APP/
 │ ├── main.jsx
 │ └── index.css
 └── README.md
+</pre>
 
 ---
 
 ## 🧰 環境構築
 
-クローンして環境構築する手順は以下の通りです。
+クローンして環境構築する手順は以下の通りです。  
 オプションとしてDocker-composeでの構築も用意しています。（おすすめ！）
 
 ### 🔹 1. クローン
@@ -69,7 +70,7 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
-API ドキュメントは以下で確認できます（実行前は確認できません）👇
+API ドキュメントは以下で確認できます（実行前は確認できません）  
 👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ### 🔹 4. フロントエンド環境構築（Vite + React + Tailwind）
@@ -78,15 +79,13 @@ cd ../frontend
 npm install
 npm run dev
 ```
-起動後、以下のURLにアクセスします👇
+起動後、以下のURLにアクセスします  
 👉 [http://localhost:5173/](http://localhost:5173/)
 
 ### ⚙️ APIエンドポイント
 | メソッド | エンドポイント | 概要 |
 | ------ | ----------- | -------- |
 |POST | /generate_image | テキストから画像を生成 |
-
----
 
 ### 🐳 Docker での実行（おすすめ／オプション）
 Docker 環境で簡単に起動できます。
