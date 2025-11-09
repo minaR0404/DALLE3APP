@@ -24,16 +24,18 @@ DALLE3APP/
 ├── backend/ # FastAPI バックエンド
 │ ├── main.py # メインAPIサーバー
 │ ├── requirements.txt # バックエンド依存ライブラリ
-│ └── ...
+│ └── Dockerfile
 ├── frontend/ # React フロントエンド
 │ ├── index.html
 │ ├── package.json
 │ ├── tailwind.config.js
 │ ├── postcss.config.js
+│ ├── Dockerfile
 │ └── src/
-│ ├── App.jsx
-│ ├── main.jsx
-│ └── index.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── docker-compose.yml
 └── README.md
 </pre>
 
